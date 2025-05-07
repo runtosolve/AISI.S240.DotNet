@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="LG.Microsoft.Data.Analysis" Version="0.18.0.4" />
+    </ItemGroup>
+
 </Project>
