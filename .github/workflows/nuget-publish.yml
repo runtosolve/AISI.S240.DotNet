@@ -23,8 +23,16 @@ jobs:
       - name: Extract version from GitHub release tag
         id: extract_version
         run: |
-          VERSION=$(echo "${{ github.event.release.tag_name }}" | sed 's/^v//')
+          if [ "${{ github.event.release.tag_name }}" != "" ]; then
+            VERSION=$(echo "${{ github.event.release.tag_name }}" | sed 's/^v//')
+            echo "Using version from release tag: $VERSION"
+          else
+            VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" YourProject.csproj)
+            echo "Using version from .csproj: $VERSION"
+          fi
+      
           echo "VERSION=$VERSION"
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "::set-output name=VERSION::$VERSION"
 
       # Restore NuGet packages
