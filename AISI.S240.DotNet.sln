@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AISI.S240.DotNet", "AISI.S240.DotNet\AISI.S240.DotNet.csproj", "{2C074C34-5E99-48A4-B0C9-682C9674A459}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AISI.S240.DotNetTests", "AISI.S240.DotNetTests\AISI.S240.DotNetTests.csproj", "{E965AC33-F9E3-40B0-A55F-BD47F9C32C45}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AISI.S240.DotNet.Tests", "AISI.S240.DotNet.Tests\AISI.S240.DotNet.Tests.csproj", "{E965AC33-F9E3-40B0-A55F-BD47F9C32C45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

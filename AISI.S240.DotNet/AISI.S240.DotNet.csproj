@@ -4,6 +4,17 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <!-- NuGet package metadata -->
+        <PackageId>AISI.S240.DotNet</PackageId>
+        <Version>0.0.1</Version>
+        <Authors>RunToSolve</Authors>
+        <Company>RunToSolve</Company>
+        <Description>.NET implementation for AISI S240</Description>
+        <PackageTags>aisi;engineering;dotnet</PackageTags>
+        <RepositoryUrl>https://github.com/runtosolve/AISI.S240.DotNet/</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://runtosolve.github.io/AISI.S240.DotNet/</PackageProjectUrl>
     </PropertyGroup>
 
     <ItemGroup>
