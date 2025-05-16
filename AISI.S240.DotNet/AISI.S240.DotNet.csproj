@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
 
         <!-- NuGet package metadata -->
-        <PackageId>AISI.S240.DotNet</PackageId>
+        <PackageId>RunToSolve.AISI.S240.DotNet</PackageId>
         <Version>0.0.1</Version>
         <Authors>RunToSolve</Authors>
         <Company>RunToSolve</Company>
@@ -15,10 +15,12 @@
         <RepositoryUrl>https://github.com/runtosolve/AISI.S240.DotNet/</RepositoryUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://runtosolve.github.io/AISI.S240.DotNet/</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        
     </PropertyGroup>
-
+    
     <ItemGroup>
-      <PackageReference Include="LG.Microsoft.Data.Analysis" Version="0.18.0.4" />
+        <None Include="..\README.md" Link="README.md" Pack="true" PackagePath="" />
     </ItemGroup>
 
 </Project>
