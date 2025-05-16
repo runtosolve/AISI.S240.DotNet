@@ -47,6 +47,12 @@ jobs:
       - name: Pack NuGet package
         run: dotnet pack AISI.S240.DotNet/AISI.S240.DotNet.csproj --configuration Release --no-build --output ./nupkgs /p:PackageVersion=${{ steps.extract_version.outputs.VERSION }}
 
+      # Inspect the .nupkg to verify metadata
+      - name: Inspect .nupkg contents
+        run: |
+          unzip -p ./nupkgs/*.nupkg '[Content_Types].xml'
+          unzip -p ./nupkgs/*.nupkg '*.nuspec'
+
       # Publish to NuGet.org
       - name: Publish to NuGet
         env:
