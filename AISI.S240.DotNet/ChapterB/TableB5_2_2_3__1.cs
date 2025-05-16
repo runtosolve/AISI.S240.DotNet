@@ -51,7 +51,7 @@ public static class TableB5_2_2_3__1
     /// <returns>
     /// The nominal shear strength value if a matching row is found; otherwise, null.
     /// </returns>
-    public static double? LookUpValue(SteelSheathing? sheathing = null, double? aspectRatio = null, PanelFastenerSpacing? fastenerSpacing = null, bool? studBlocking = null,
+    public static double? LookUp(SteelSheathing? sheathing = null, double? aspectRatio = null, PanelFastenerSpacing? fastenerSpacing = null, bool? studBlocking = null,
         int? designationThickness = null, int? screwSize = null)
     {
         var predicate = new Func<Row, bool>(row =>
@@ -66,7 +66,7 @@ public static class TableB5_2_2_3__1
         
         var result = _table.Match(predicate, valueSelector, findMaximum);
 
-        return result != null ? result.NominalShearStrength : null;
+        return result?.NominalShearStrength;
     }
     
     /// <summary>

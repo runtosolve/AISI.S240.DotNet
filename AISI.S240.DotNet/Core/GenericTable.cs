@@ -8,7 +8,7 @@ public class GenericTable<TRow>
     /// Internal data structure to hold the rows of the table.
     /// </summary>
     private readonly IList<TRow> _rows = new List<TRow>();
-    
+
     /// <summary>
     /// Read-only property to access the rows of the table.
     /// </summary>
@@ -36,8 +36,8 @@ public class GenericTable<TRow>
 
         if (matches.Count == 0) return default;
 
-        return findMaximum 
-            ? matches.OrderByDescending(valueSelector).FirstOrDefault() 
+        return findMaximum
+            ? matches.OrderByDescending(valueSelector).FirstOrDefault()
             : matches.OrderBy(valueSelector).FirstOrDefault();
     }
 

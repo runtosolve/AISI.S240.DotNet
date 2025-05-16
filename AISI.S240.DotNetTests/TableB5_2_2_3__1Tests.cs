@@ -13,7 +13,7 @@ public class TableB5_2_2_3__1Tests
         var fastenerSpacing = new PanelFastenerSpacing(6, 12);
         
         // Act
-        var value = TableB5_2_2_3__1.LookUpValue(sheathing: steelSheathing, fastenerSpacing: fastenerSpacing);
+        var value = TableB5_2_2_3__1.LookUp(sheathing: steelSheathing, fastenerSpacing: fastenerSpacing);
         
         // Assert
         Assert.NotNull(value);
@@ -28,7 +28,7 @@ public class TableB5_2_2_3__1Tests
         var fastenerSpacing = new PanelFastenerSpacing(6, 12);
         
         // Act
-        var value = TableB5_2_2_3__1.LookUpValue(sheathing: steelSheathing, fastenerSpacing: fastenerSpacing);
+        var value = TableB5_2_2_3__1.LookUp(sheathing: steelSheathing, fastenerSpacing: fastenerSpacing);
         
         // Assert
         Assert.Null(value);
