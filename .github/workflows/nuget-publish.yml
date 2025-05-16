@@ -27,7 +27,7 @@ jobs:
             VERSION=$(echo "${{ github.event.release.tag_name }}" | sed 's/^v//')
             echo "Using version from release tag: $VERSION"
           else
-            VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" AISI.S240.DotNet.csproj)
+            VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" AISI.S240.DotNet/AISI.S240.DotNet.csproj)
             echo "Using version from .csproj: $VERSION"
           fi
       
