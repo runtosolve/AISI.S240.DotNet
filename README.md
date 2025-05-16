@@ -2,12 +2,9 @@
 
 <!-- [![NuGet Downloads](https://img.shields.io/nuget/dt/RunToSolve.AISI.S240.DotNet?style=flat)](https://www.nuget.org/packages/RunToSolve.AISI.S240.DotNet/) -->
 
-
-
-
 # AISI.S240.DotNet
 
-An .NET library for AISI S240.
+An .NET C# library for AISI S240.
 
 AISI S240 is the North American Standard for Cold-Formed Steel Structural Framing developed by
 American Iron and Steel Institute (AISI).
