@@ -47,11 +47,18 @@ jobs:
       - name: Pack NuGet package
         run: dotnet pack AISI.S240.DotNet/AISI.S240.DotNet.csproj --configuration Release --no-build --output ./nupkgs /p:PackageVersion=${{ steps.extract_version.outputs.VERSION }}
 
-      # Inspect the .nupkg to verify metadata
       - name: Inspect .nupkg contents
         run: |
-          unzip -p ./nupkgs/*.nupkg '[Content_Types].xml'
-          unzip -p ./nupkgs/*.nupkg '*.nuspec'
+          echo "=== List contents of .nupkg ==="
+          unzip -l ./nupkgs/*.nupkg
+      
+          echo ""
+          echo "=== Extract .nuspec file ==="
+          unzip -p ./nupkgs/*.nupkg $(unzip -l ./nupkgs/*.nupkg | awk '{print $4}' | grep '\.nuspec$')
+      
+          echo ""
+          echo "=== Extract [Content_Types].xml ==="
+          unzip -p ./nupkgs/*.nupkg '[Content_Types].xml' || unzip -p ./nupkgs/*.nupkg _rels/.rels || echo "Could not extract [Content_Types].xml"
 
       # Publish to NuGet.org
       - name: Publish to NuGet
