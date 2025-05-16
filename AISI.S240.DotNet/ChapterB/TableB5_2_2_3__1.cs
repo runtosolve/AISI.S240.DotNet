@@ -27,6 +27,11 @@ public static class TableB5_2_2_3__1
     /// Internal data structure to hold the rows of the table.
     /// </summary>
     private static GenericTable<Row> _table;
+    
+    /// <summary>
+    /// Table name formatted as used in the AISI S240 standard.
+    /// </summary>
+    public static string TableName => GetTableName();
 
     static TableB5_2_2_3__1()
     {
@@ -62,6 +67,15 @@ public static class TableB5_2_2_3__1
         var result = _table.Match(predicate, valueSelector, findMaximum);
 
         return result != null ? result.NominalShearStrength : null;
+    }
+    
+    /// <summary>
+    /// Export the table to a JSON string.
+    /// </summary>
+    
+    public static string ExportToJson()
+    {
+        return _table.ToJson();
     }
 
     /// <summary>
@@ -111,5 +125,20 @@ public static class TableB5_2_2_3__1
         table.AddRow(new Row(new SteelSheathing(0.033), 4.0, new PanelFastenerSpacing(2, 12), true, 54, 10, 2085.0));
         
         return table;
+    }
+
+    /// <summary>
+    /// Internal function to convert the table class name to a table name.
+    /// </summary>
+    /// <returns>Table name</returns>
+    private static string GetTableName()
+    {
+        var className = nameof(TableB5_2_2_3__1);
+        var tableNumber = className
+            .Replace("Table", "")
+            .Replace("__", "-")
+            .Replace("_", ".");
+        
+        return $"Table {tableNumber}";
     }
 }

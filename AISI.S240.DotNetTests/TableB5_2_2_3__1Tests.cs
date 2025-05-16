@@ -33,4 +33,15 @@ public class TableB5_2_2_3__1Tests
         // Assert
         Assert.Null(value);
     }
+    
+    [Fact]
+    public void ExportToJson_ReturnsValidJson()
+    {
+        // Act
+        var json = TableB5_2_2_3__1.ExportToJson();
+        
+        // Assert
+        Assert.NotNull(json);
+        Assert.Contains("\"nominal_shear_strength\": 485", json);
+    }
 }
