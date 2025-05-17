@@ -1,4 +1,5 @@
-using System.Text.Json;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace AISI.S240.DotNet.Core;
 
@@ -50,10 +51,16 @@ public class GenericTable<TRow>
     /// </remarks>
     public string ToJson()
     {
-        return JsonSerializer.Serialize(_rows, new JsonSerializerOptions
-        {
-            WriteIndented = true,
-            PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower,
-        });
+        return JsonConvert.SerializeObject(
+            _rows,
+            Formatting.Indented,
+            new JsonSerializerSettings
+            {
+                ContractResolver = new DefaultContractResolver
+                {
+                    NamingStrategy = new SnakeCaseNamingStrategy()
+                }
+            }
+        );
     }
 }
