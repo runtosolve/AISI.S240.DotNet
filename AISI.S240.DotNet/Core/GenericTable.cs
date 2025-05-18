@@ -3,7 +3,7 @@ using Newtonsoft.Json.Serialization;
 
 namespace AISI.S240.DotNet.Core;
 
-public class GenericTable<TRow>
+internal class GenericTable<TRow>
 {
     /// <summary>
     /// Internal data structure to hold the rows of the table.
@@ -13,13 +13,13 @@ public class GenericTable<TRow>
     /// <summary>
     /// Read-only property to access the rows of the table.
     /// </summary>
-    public IReadOnlyList<TRow> Rows => (IReadOnlyList<TRow>)_rows;
+    internal IReadOnlyList<TRow> Rows => (IReadOnlyList<TRow>)_rows;
 
     /// <summary>
     /// Add a row to the table.
     /// </summary>
     /// <param name="row">Row to add</param>
-    public void AddRow(TRow row)
+    internal void AddRow(TRow row)
     {
         _rows.Add(row);
     }
@@ -31,7 +31,7 @@ public class GenericTable<TRow>
     /// <param name="valueSelector">Function to select which value in the row to select for comparison</param>
     /// <param name="findMaximum">Whether to find the row with the maximum value or minimum value</param>
     /// <returns>The row matched</returns>
-    public TRow? Match(Func<TRow, bool> predicate, Func<TRow, double> valueSelector, bool findMaximum = true)
+    internal TRow? Match(Func<TRow, bool> predicate, Func<TRow, double> valueSelector, bool findMaximum = true)
     {
         var matches = _rows.Where(predicate).ToList();
 
@@ -49,7 +49,7 @@ public class GenericTable<TRow>
     /// Lower snake_case is used for the JSON property names.
     /// It is easier to represent engineering data in snake_case format (e.g., k_t vs. kT).
     /// </remarks>
-    public string ToJson()
+    internal string ToJson()
     {
         return JsonConvert.SerializeObject(
             _rows,

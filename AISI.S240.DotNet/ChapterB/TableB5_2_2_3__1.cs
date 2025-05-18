@@ -1,4 +1,4 @@
-using AISI.S240.DotNet.ChapterB.Entity;
+using AISI.S240.DotNet.ChapterB.Entities;
 using AISI.S240.DotNet.Core;
 
 namespace AISI.S240.DotNet.ChapterB;
@@ -34,7 +34,7 @@ public static class TableB5_2_2_3__1
     public static string Label => GetTableLabel();
 
     /// <summary>
-    /// Table name as used in the AISI-S240 standard.
+    /// Table name as used in the AISI-S240 standard (2020).
     /// </summary>
     public static string Name => "Unit nominal shear strength vn for shear walls with steel sheet sheathing on one side of the wall";
 

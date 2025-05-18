@@ -1,5 +1,5 @@
 using AISI.S240.DotNet.ChapterB;
-using AISI.S240.DotNet.ChapterB.Entity;
+using FluentAssertions;
 
 namespace AISI.S240.DotNetTests;
 
@@ -8,28 +8,21 @@ public class TableB5_2_2_3__1Tests
     [Fact]
     public void LookUpValue_WithValidConditions_ReturnCorrectValue()
     {
-        // Arrange
-        var fastenerSpacing = new PanelFastenerSpacing(6, 12);
-
         // Act
         var value = TableB5_2_2_3__1.LookUp(steelSheathingThickness: 0.018, aspectRatio: 1.0, fastenerEdgeSpacing: 6, fastenerFieldSpacing: 10, useStudBlocking: true, 43, 8);
 
         // Assert
-        Assert.NotNull(value);
-        Assert.Equal(485.0, value);
+        value.Should().BeApproximately(485.0, 1E-3);
     }
 
     [Fact]
     public void LookUpValue_WithInValidConditions_ReturnCorrectValue()
     {
-        // Arrange
-        var fastenerSpacing = new PanelFastenerSpacing(6, 12);
-
         // Act
         var value = TableB5_2_2_3__1.LookUp(steelSheathingThickness: 0.016, aspectRatio: 1.0, fastenerEdgeSpacing: 6, fastenerFieldSpacing: 24, useStudBlocking: false, 43, 8);
 
         // Assert
-        Assert.Null(value);
+        value.Should().BeNull();
     }
 
     [Fact]
@@ -39,7 +32,6 @@ public class TableB5_2_2_3__1Tests
         var json = TableB5_2_2_3__1.ExportToJson();
 
         // Assert
-        Assert.NotNull(json);
-        Assert.Contains("\"nominal_shear_strength\": 485", json);
+        json.Should().Contain("\"nominal_shear_strength\": 485");
     }
 }
