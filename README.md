@@ -1,6 +1,5 @@
 [![NuGet version (RunToSolve.AISI.S240.DotNet)](https://img.shields.io/nuget/v/RunToSolve.AISI.S240.DotNet.svg?style=flat)](https://www.nuget.org/packages/RunToSolve.AISI.S240.DotNet/)
-
-<!-- [![NuGet Downloads](https://img.shields.io/nuget/dt/RunToSolve.AISI.S240.DotNet?style=flat)](https://www.nuget.org/packages/RunToSolve.AISI.S240.DotNet/) -->
+[![NuGet Downloads](https://img.shields.io/nuget/dt/RunToSolve.AISI.S240.DotNet?style=flat)](https://www.nuget.org/packages/RunToSolve.AISI.S240.DotNet/)
 
 # AISI.S240.DotNet
 
