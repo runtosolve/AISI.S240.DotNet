@@ -58,7 +58,7 @@ public static class TableB5_2_2_3__1
     /// The nominal shear strength value if a matching row is found; otherwise, null.
     /// </returns>
     public static double? LookUp(double steelSheathingThickness, double aspectRatio, int fastenerEdgeSpacing, int fastenerFieldSpacing, bool useStudBlocking,
-        int designationThickness, int? screwSize)
+        int designationThickness, int screwSize)
     {
         var fastenerSpacing = new PanelFastenerSpacing(fastenerEdgeSpacing, fastenerFieldSpacing);
 

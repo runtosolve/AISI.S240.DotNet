@@ -68,7 +68,7 @@ public static class EqB5_2_5__1
         details.AddDetail("h", h, "Height of the wall (in).", "");
         details.AddDetail("t_sheathing", t_sheathing, "Nominal panel thickness of sheathing (in).", "");
         details.AddDetail("v", v, "Shear demand (lb/in), calculated as V/b.", "");
-        details.AddDetail("beta", beta, "Material-specific slip coefficient (e.g., for OSB, plywood, or steel sheathing).", "");
+        details.AddDetail("beta", beta, "Material-specific coefficient (e.g., for OSB, plywood, or steel sheathing).", "");
         details.AddDetail("delta_v", delta_v, "Vertical deformation from anchorage/attachment details (in).", "");
         details.AddDetail("rho", rho, "Coefficient dependent on sheathing type (dimensionless).", "");
         details.AddDetail("omega1", omega1, "Deflection calculation factor 1.", "");
