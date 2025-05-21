@@ -20,13 +20,14 @@ public static class EqB5_2_5__1
     /// <param name="h">Height of the wall (in).</param>
     /// <param name="t_sheathing">Nominal panel thickness of sheathing (in).</param>
     /// <param name="v">Shear demand (lb/in), calculated as V/b.</param>
-    /// <param name="beta">Material-specific slip coefficient (e.g., for OSB, plywood, or steel sheathing). 29.12(t_sheathing/0.018) for steel.</param>
+    /// <param name="beta">Material-specific coefficient (e.g., for OSB, plywood, or steel sheathing). 29.12(t_sheathing/0.018) for steel.</param>
     /// <param name="delta_v">Vertical deformation from anchorage/attachment details (in).</param>
     /// <param name="rho">Coefficient dependent on sheathing type (dimensionless). 0.075(t_sheathing/0.018) for steel.</param>
     /// <param name="omega1">Deflection calculation factor 1.</param>
     /// <param name="omega2">Deflection calculation factor 2.</param>
     /// <param name="omega3">Deflection calculation factor 3.</param>
     /// <param name="omega4">Deflection calculation factor 4.</param>
+    /// <param name="details">Details of the equation calculation</param>
     /// <returns>Total deflection δ (inches) of the shear wall.</returns>
     public static double Calculate(
         double Ac,
