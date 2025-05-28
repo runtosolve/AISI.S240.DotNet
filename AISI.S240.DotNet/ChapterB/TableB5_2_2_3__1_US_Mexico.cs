@@ -6,7 +6,7 @@ namespace AISI.S240.DotNet.ChapterB;
 /// <summary>
 /// Table B5.2.2.3-1, Unit nominal shear strength vn for shear walls with steel sheet sheathing on one side of the wall
 /// </summary>
-public static class TableB5_2_2_3__1
+public static class TableB5_2_2_3__1_US_Mexico
 {
     /// <summary>
     /// Inner class to represent the rows of the table.
@@ -38,7 +38,7 @@ public static class TableB5_2_2_3__1
     /// </summary>
     public static string Name => "Unit nominal shear strength vn for shear walls with steel sheet sheathing on one side of the wall";
 
-    static TableB5_2_2_3__1()
+    static TableB5_2_2_3__1_US_Mexico()
     {
         _table = Initialize();
     }
@@ -139,7 +139,7 @@ public static class TableB5_2_2_3__1
     /// <returns>Table name</returns>
     private static string GetTableLabel()
     {
-        var className = nameof(TableB5_2_2_3__1);
+        var className = nameof(TableB5_2_2_3__1_US_Mexico);
         var tableNumber = className
             .Replace("Table", "")
             .Replace("__", "-")
