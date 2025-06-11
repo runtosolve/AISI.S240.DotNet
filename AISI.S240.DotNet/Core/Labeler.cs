@@ -1,4 +1,4 @@
-namespace AISI.S240.DotNet.Core;
+namespace RunToSolve.AISI.S240.DotNet.Core;
 
 /// <summary>
 /// Provides utility methods for generating standardized labels for tables and equations

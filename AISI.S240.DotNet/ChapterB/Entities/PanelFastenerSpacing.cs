@@ -1,4 +1,4 @@
-namespace AISI.S240.DotNet.ChapterB.Entities;
+namespace RunToSolve.AISI.S240.DotNet.ChapterB.Entities;
 
 /// <summary>
 /// Represents the spacing of fasteners along the edge and field of a panel.

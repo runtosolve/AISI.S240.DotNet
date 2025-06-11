@@ -1,7 +1,7 @@
-using AISI.S240.DotNet.ChapterB.Entities;
-using AISI.S240.DotNet.Core;
+using RunToSolve.AISI.S240.DotNet.ChapterB.Entities;
+using RunToSolve.AISI.S240.DotNet.Core;
 
-namespace AISI.S240.DotNet.ChapterB;
+namespace RunToSolve.AISI.S240.DotNet.ChapterB;
 
 /// <summary>
 /// Table B5.2.2.3-2, Unit nominal shear strength vn for shear walls with wood structural panel sheathing on one side of the wall

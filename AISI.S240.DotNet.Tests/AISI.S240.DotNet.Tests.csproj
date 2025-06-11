@@ -7,7 +7,8 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
-        <RootNamespace>AISI.S240.DotNetTests</RootNamespace>
+        <RootNamespace>RunToSolve.AISI.S240.DotNetTests</RootNamespace>
+        <AssemblyName>RunToSolve.AISI.S240.DotNet.Tests</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>

@@ -1,4 +1,4 @@
-namespace AISI.S240.DotNet.ChapterB.Entities;
+namespace RunToSolve.AISI.S240.DotNet.ChapterB.Entities;
 
 public enum SheathingType
 {

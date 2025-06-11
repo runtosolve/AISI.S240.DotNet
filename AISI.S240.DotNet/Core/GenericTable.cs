@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace AISI.S240.DotNet.Core;
+namespace RunToSolve.AISI.S240.DotNet.Core;
 
 internal class GenericTable<TRow>
 {

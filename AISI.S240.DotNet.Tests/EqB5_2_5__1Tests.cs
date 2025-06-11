@@ -1,8 +1,8 @@
 using FluentAssertions;
 
-namespace AISI.S240.DotNetTests;
+namespace RunToSolve.AISI.S240.DotNetTests;
 
-using AISI.S240.DotNet.ChapterB;
+using RunToSolve.AISI.S240.DotNet.ChapterB;
 
 public class EqB5_2_5__1Tests
 {

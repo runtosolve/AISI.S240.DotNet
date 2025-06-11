@@ -1,6 +1,6 @@
-using AISI.S240.DotNet.Core;
+using RunToSolve.AISI.S240.DotNet.Core;
 
-namespace AISI.S240.DotNet.ChapterB;
+namespace RunToSolve.AISI.S240.DotNet.ChapterB;
 
 /// <summary>
 /// Eq. B5.2.5-1 in the AISI-S240 standard (2020).

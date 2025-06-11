@@ -1,4 +1,4 @@
-namespace AISI.S240.DotNet.Core;
+namespace RunToSolve.AISI.S240.DotNet.Core;
 
 /// <summary>
     /// Represents a detailed result value with associated metadata.

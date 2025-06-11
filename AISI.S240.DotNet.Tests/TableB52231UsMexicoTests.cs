@@ -1,7 +1,7 @@
-using AISI.S240.DotNet.ChapterB;
+using RunToSolve.AISI.S240.DotNet.ChapterB;
 using FluentAssertions;
 
-namespace AISI.S240.DotNetTests;
+namespace RunToSolve.AISI.S240.DotNetTests;
 
 public class TableB52231UsMexicoTests
 {

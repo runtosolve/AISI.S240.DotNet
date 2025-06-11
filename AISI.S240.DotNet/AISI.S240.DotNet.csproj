@@ -5,7 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>latest</LangVersion>
-        
+        <RootNamespace>RunToSolve.AISI.S240.DotNet</RootNamespace>
         <!-- NuGet package metadata -->
         <PackageId>RunToSolve.AISI.S240.DotNet</PackageId>
         <Version>0.0.5</Version>
@@ -17,6 +17,7 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://runtosolve.github.io/AISI.S240.DotNet/</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <AssemblyName>RunToSolve.AISI.S240.DotNet</AssemblyName>
         
     </PropertyGroup>
     

@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace AISI.S240.DotNet.Core;
+namespace RunToSolve.AISI.S240.DotNet.Core;
 
 /// <summary>
 /// Stores detailed results for variables used in an equation calculation.
