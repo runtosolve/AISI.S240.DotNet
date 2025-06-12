@@ -8,7 +8,7 @@
         <RootNamespace>RunToSolve.AISI.S240.DotNet</RootNamespace>
         <!-- NuGet package metadata -->
         <PackageId>RunToSolve.AISI.S240.DotNet</PackageId>
-        <Version>0.0.5</Version>
+        <Version>0.0.7</Version>
         <Authors>RunToSolve</Authors>
         <Company>RunToSolve</Company>
         <Description>.NET implementation for AISI S240</Description>
