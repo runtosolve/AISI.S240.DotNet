@@ -10,7 +10,7 @@ public class TableB52232UsMexicoTests
     public void LookUpValue_WithValidConditions_ReturnCorrectValue()
     {
         // Act
-        var value = TableB5_2_2_3__2_US_Mexico.LookUp(sheathingThickness: 7.0/16.0, sheathingType: SheathingType.Structural1Plywood4Ply, aspectRatio: 1.0, fastenerEdgeSpacing: 6, fastenerFieldSpacing: 10, designationThickness: 43);
+        var value = TableB5_2_2_3__2_US_Mexico.LookUp(sheathingThickness: 15.0/32.0, sheathingType: SheathingType.Structural1Plywood4Ply, aspectRatio: 1.0, fastenerEdgeSpacing: 6, fastenerFieldSpacing: 10, designationThickness: 43);
         
         // Assert
         value.Should().BeApproximately(1065.0, 1E-3);

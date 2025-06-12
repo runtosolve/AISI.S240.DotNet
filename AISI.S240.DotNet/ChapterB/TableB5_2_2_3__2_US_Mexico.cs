@@ -66,13 +66,12 @@ public static class TableB5_2_2_3__2_US_Mexico
         var fastenerSpacing = new PanelFastenerSpacing(fastenerEdgeSpacing, fastenerFieldSpacing);
         
         var predicate = new Func<Row, bool>(row =>
-            
-            sheathingThickness >= row.SheathingThickness &&
-            sheathingType == row.SheathingType &&
-            sheathingOrientation == row.SheathingOrientation || (row.SheathingOrientation == SheathingOrientation.ParallelOrPerpendicularToFraming) &&
-            aspectRatio <= row.MaxAspectRatio &&
-            fastenerSpacing.IsComparable(row.FastenerSpacing) && fastenerSpacing <= row.FastenerSpacing &&
-            designationThickness >= row.DesignationThickness);
+            (sheathingThickness >= row.SheathingThickness) &&
+            (sheathingType == row.SheathingType) &&
+            (sheathingOrientation == row.SheathingOrientation || row.SheathingOrientation == SheathingOrientation.ParallelOrPerpendicularToFraming) &&
+            (aspectRatio <= row.MaxAspectRatio) &&
+            (fastenerSpacing <= row.FastenerSpacing) &&
+            (designationThickness >= row.DesignationThickness));
         
         var valueSelector = new Func<Row, double>(row => row.NominalShearStrength);
         var findMaximum = true; // Find the maximum shear strength
@@ -102,10 +101,10 @@ public static class TableB5_2_2_3__2_US_Mexico
         table.AddRow(new Row(15.0/32.0, SheathingType.Structural1Plywood4Ply, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(3, 12), 43, 1735.0));
         table.AddRow(new Row(15.0/32.0, SheathingType.Structural1Plywood4Ply, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(2, 12), 43, 1910.0));
         
-        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelToFraming, 2.0, new PanelFastenerSpacing(6, 12), 33, 910.0));
-        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelToFraming, 2.0, new PanelFastenerSpacing(4, 12), 33, 1410.0));
-        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelToFraming, 2.0, new PanelFastenerSpacing(3, 12), 33, 1735.0));
-        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelToFraming, 2.0, new PanelFastenerSpacing(2, 12), 33, 1910.0));
+        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(6, 12), 33, 910.0));
+        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(4, 12), 33, 1410.0));
+        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(3, 12), 33, 1735.0));
+        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(2, 12), 33, 1910.0));
         
         table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.PerpendicularToFraming, 2.0, new PanelFastenerSpacing(6, 12), 33, 1020.0));
         

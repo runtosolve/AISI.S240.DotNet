@@ -65,7 +65,7 @@ public static class TableB5_2_2_3__1_US_Mexico
         var predicate = new Func<Row, bool>(row =>
             (steelSheathingThickness >= row.SteelSheathingThickness) &&
             (aspectRatio <= row.MaxAspectRatio) &&
-            (fastenerSpacing.IsComparable(row.FastenerSpacing) && fastenerSpacing <= row.FastenerSpacing) &&
+            (fastenerSpacing <= row.FastenerSpacing) &&
             (useStudBlocking || !row.StudBlockingRequired) &&
             (designationThickness >= row.DesignationThickness) &&
             (screwSize >= row.ScrewSize));
