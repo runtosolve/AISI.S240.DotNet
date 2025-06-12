@@ -31,7 +31,7 @@ public static class TableB5_2_2_3__1_US_Mexico
     /// <summary>
     /// Table label formatted as used in the AISI-S240 standard.
     /// </summary>
-    public static string Label => GetTableLabel();
+    public static string Label => Labeler.GetEquationLabel(nameof(EqB5_2_5__1));
 
     /// <summary>
     /// Table name as used in the AISI-S240 standard (2020).
@@ -131,20 +131,5 @@ public static class TableB5_2_2_3__1_US_Mexico
 
         table.AddRow(new Row(0.033, 4.0, new PanelFastenerSpacing(2, 12), true, 54, 10, 2085.0));
         return table;
-    }
-
-    /// <summary>
-    /// Internal function to convert the table class name to a table name.
-    /// </summary>
-    /// <returns>Table name</returns>
-    private static string GetTableLabel()
-    {
-        var className = nameof(TableB5_2_2_3__1_US_Mexico);
-        var tableNumber = className
-            .Replace("Table", "")
-            .Replace("__", "-")
-            .Replace("_", ".");
-
-        return $"Table {tableNumber}";
     }
 }

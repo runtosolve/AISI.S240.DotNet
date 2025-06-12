@@ -3,26 +3,23 @@ using RunToSolve.AISI.S240.DotNet.Core;
 
 namespace RunToSolve.AISI.S240.DotNet.ChapterB;
 
-/// <summary>
-/// Table B5.2.2.3-2, Unit nominal shear strength vn for shear walls with wood structural panel sheathing on one side of the wall
-/// </summary>
-public static class TableB5_2_2_3__2_US_Mexico
+public static class TableB5_2_2_3__3_US_Mexico
 {
-    /// <summary>
+    // <summary>
     /// Inner class to represent the rows of the table.
     /// </summary>
     /// <remarks>
     /// Must be record so that the GenericTable.Match function can return null if nothing is found.
     /// </remarks>
     private record Row(
-        double SheathingThickness,
-        SheathingType SheathingType,    
-        SheathingOrientation SheathingOrientation,  
-        double MaxAspectRatio,  
-        PanelFastenerSpacing FastenerSpacing,
-        int DesignationThickness,
-        double NominalShearStrength);
-    
+        double SheathingThickness
+        , SheathingType SheathingType
+        , SheathingOrientation SheathingOrientation
+        , double MaxAspectRatio
+        , PanelFastenerSpacing FastenerSpacing
+        , int DesignationThickness
+        , double NominalShearStrength);
+
     /// <summary>
     /// Internal data structure to hold the rows of the table.
     /// </summary>
@@ -36,13 +33,13 @@ public static class TableB5_2_2_3__2_US_Mexico
     /// <summary>
     /// Table name as used in the AISI-S240 standard (2020).
     /// </summary>
-    public static string Name => "Unit nominal shear strength vn for shear walls with wood structural panel sheathing on one side of the wall";
+    public static string Name => "Unit nominal shear strength vn for shear walls with gypsum board panel sheathing on one side of the wall";
 
-    static TableB5_2_2_3__2_US_Mexico()
+    static TableB5_2_2_3__3_US_Mexico()
     {
         _table = Initialize();
     }
-
+    
     /// <summary>
     /// Looks up the nominal shear strength value from the table based on the provided filter criteria.
     /// Returns the maximum matching value unless otherwise specified.
@@ -77,15 +74,7 @@ public static class TableB5_2_2_3__2_US_Mexico
 
         return result?.NominalShearStrength;
     }
-
-    /// <summary>
-    /// Export the table to a JSON string.
-    /// </summary>
-    public static string ExportToJson()
-    {
-        return _table.ToJson();
-    }
-
+    
     /// <summary>
     /// Initialize the table with the data
     /// </summary>
@@ -93,22 +82,11 @@ public static class TableB5_2_2_3__2_US_Mexico
     private static GenericTable<Row> Initialize()
     {
         var table = new GenericTable<Row>();
-        table.AddRow(new Row(15.0/32.0, SheathingType.Structural1Plywood4Ply, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(6, 12), 43, 1065.0));
-        table.AddRow(new Row(15.0/32.0, SheathingType.Structural1Plywood4Ply, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(4, 12), 43, 1410.0));
-        table.AddRow(new Row(15.0/32.0, SheathingType.Structural1Plywood4Ply, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(3, 12), 43, 1735.0));
-        table.AddRow(new Row(15.0/32.0, SheathingType.Structural1Plywood4Ply, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(2, 12), 43, 1910.0));
-        
-        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(6, 12), 33, 910.0));
-        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(4, 12), 33, 1410.0));
-        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(3, 12), 33, 1735.0));
-        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(2, 12), 33, 1910.0));
-        
-        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.PerpendicularToFraming, 2.0, new PanelFastenerSpacing(6, 12), 33, 1020.0));
-        
-        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelOrPerpendicularToFraming, 4.0, new PanelFastenerSpacing(4, 12), 33, 1025.0));
-        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelOrPerpendicularToFraming, 4.0, new PanelFastenerSpacing(3, 12), 33, 1425.0));
-        table.AddRow(new Row(7.0/16, SheathingType.RatedSheathingOSB, SheathingOrientation.ParallelOrPerpendicularToFraming, 4.0, new PanelFastenerSpacing(2, 12), 33, 1825.0));
-        
+        table.AddRow(new Row(0.5, SheathingType.GypsumBoard, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(8, 12), 33, 230.0));
+        table.AddRow(new Row(0.5, SheathingType.GypsumBoard, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(4, 12), 33, 295.0));
+        table.AddRow(new Row(0.5, SheathingType.GypsumBoard, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(7, 7), 33, 290.0));
+        table.AddRow(new Row(0.5, SheathingType.GypsumBoard, SheathingOrientation.ParallelOrPerpendicularToFraming, 2.0, new PanelFastenerSpacing(4, 4), 33, 425.0));
+
         return table;
     }
 }
